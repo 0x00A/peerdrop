@@ -1,45 +1,37 @@
-# SYNOPSIS
-An airdrop clone
+# [PeerDrop](https://0x00a.github.io/peerdrop/)
 
-# AVATAR
+**A FLOSS, cross-platform Airdrop alternative**
+
+Made at [Offline Camp](http://offlinefirst.org/camp/)
+
+## SETUP
+
+After cloning and installing dependecies, run **`npm start`**. It launches the [Electron](https://electron.atom.io/) binary, wrapped in a [nodemon](https://nodemon.io/) to make development more comfortable. 
+
+You can also run `npm run git-deamon` to [launch a one-off git server](https://gist.github.com/datagrok/5080545). It will tell you how others can then clone and pull directly from your machine.
+
+## AVATAR
 
 Drop an image to your own bubble at the bottom. PeerDrop will persist this at `~/avatar/`
 
 ![image](https://cloud.githubusercontent.com/assets/170145/25565945/3aaed0e0-2dd1-11e7-8960-4e29b5ae6274.png)
 
 
-# BUILD
+## BUILD
 
-## Linux
+### Linux
 
 `npm run build-linux` builds deb/zip packages
 
-### System Dependencies
+#### System Dependencies
 
-#### Arch Linux
+##### Arch Linux
 
 * graphicsmagick
 * libicns (AUR)
 
-## Mac
+### Mac
 
 `npm run build-mac` builds app/dmg/zip packages
 
-# RUN
-To run the app, use the bin in the `node_modules` directory.
 
-```bash
-./node_modules/.bin/electron ./index.js
-```
-
-or run with nodemon to restart on changes
-
-```bash
-./node_modules/.bin/nodemon ./node_modules/.bin/electron ./index.js
-```
-
-which is also wrapped with
-
-```bash
-npm start
-```

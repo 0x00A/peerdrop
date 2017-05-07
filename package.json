@@ -4,10 +4,12 @@
   "description": "An airdrop clone",
   "main": "index.js",
   "dependencies": {
+    "cli-color": "^1.2.0",
     "clone": "2.1.1",
     "drag-drop": "^2.13.2",
     "extract-zip": "=1.6.0",
     "husky": "^0.13.3",
+    "ip": "^1.1.5",
     "nodemon": "^1.11.0",
     "progress-stream": "2.0.0",
     "progressbar.js": "1.0.1",
@@ -23,7 +25,8 @@
     "start": "./node_modules/.bin/nodemon --ext js,html --ignore node_modules/ ./node_modules/.bin/electron ./index.js",
     "postcheckout": "bin/postcheckout",
     "build-linux": "build --linux zip deb",
-    "build-mac": "build --mac"
+    "build-mac": "build --mac",
+    "git-daemon": "node ./ipAndHostnameInfo.js & git daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/"
   },
   "build": {
     "appId": "peerdrop.offlinefirst",
